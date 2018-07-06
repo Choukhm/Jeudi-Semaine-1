@@ -16,9 +16,8 @@ puts "2. Les cryptomonnaies avec la valeur la plus basse sont #{cours_num_sorted
 
 
 
-puts "3. Les devises qui contiennent coin dans leur nom sont"
-puts cours_num_sorted.keys.grep(/coin/).to_a.sort
-
+puts "3. Les devises qui contiennent 'coin' sont au nombre de :"
+puts cours_num_sorted.keys.grep(/coin/).length
 
 puts "4. Les devises dont la valeur est supérieure à 6000 sont"
 cours_filterd = cours_num_sorted.select { |k, v| v.to_s.match(/.*[6-9]...\..*/)}
